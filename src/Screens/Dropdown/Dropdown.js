@@ -11,7 +11,10 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import images from '../../constants/images';
-import {moderateScale, moderateScaleVertical} from '../../styles/responsiveSize';
+import {
+  moderateScale,
+  moderateScaleVertical,
+} from '../../styles/responsiveSize';
 import colors from '../../styles/colors';
 // import Icon from 'react-native-vector-icons/Ionicons';  // Only if you're using icons
 
@@ -37,11 +40,18 @@ const Dropdown = ({options, onSelect, placeholder}) => {
         </Text>
         <Image source={images.arrowDown} style={styles.icon} />
       </TouchableOpacity>
-      {isModalVisible &&
-      <TouchableWithoutFeedback  onPress={() => setIsModalVisible(false)}>
-        <View   style={{borderWidth:moderateScale(1),width:'100%',zIndex:999, backgroundColor:colors.white, top:moderateScaleVertical(50), position:'absolute'}} >
-          {
-            options?.map((ele, ind) => {
+      {isModalVisible && (
+        <TouchableWithoutFeedback onPress={() => setIsModalVisible(false)}>
+          <View
+            style={{
+              borderWidth: moderateScale(1),
+              width: '100%',
+              zIndex: 999,
+              backgroundColor: colors.white,
+              top: moderateScaleVertical(50),
+              position: 'absolute',
+            }}>
+            {options?.map((ele, ind) => {
               return (
                 <TouchableOpacity
                   style={styles.item}
@@ -50,12 +60,10 @@ const Dropdown = ({options, onSelect, placeholder}) => {
                 </TouchableOpacity>
               );
             })}
-        </View>
-      </TouchableWithoutFeedback>
-}
-      <Text>
-        Kshitiz
-      </Text>
+          </View>
+        </TouchableWithoutFeedback>
+      )}
+      <Text>Kshitiz</Text>
     </View>
   );
 };
@@ -72,7 +80,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
-    height:moderateScaleVertical(50),
+    height: moderateScaleVertical(50),
     borderWidth: 1,
     borderRadius: 5,
     backgroundColor: '#fff',
