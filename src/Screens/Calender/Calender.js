@@ -58,7 +58,6 @@ const Calendar = () => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity
@@ -94,7 +93,6 @@ const Calendar = () => {
           style={styles.grid}
         />
       </View>
-    </SafeAreaView>
   );
 };
 
