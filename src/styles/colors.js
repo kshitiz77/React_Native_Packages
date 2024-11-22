@@ -1,0 +1,21 @@
+export default {
+  themeColor: '#132249',
+  white: "#FFFFFF",
+  black: '#000000',
+  lightGray: '#7d7e81',
+  veryLightGrey: '#bdbdbd',
+  red: '#bd1313',
+  darkRed: '#c02c2b',
+  darkYellow: '#fcac49',
+  yellow: '#fedc00',
+  purple: '#702082',
+  blue: '#183672',
+  orange: '#ef7f19',
+  darkGreen: '#1d601f',
+  lightGreen: '#4caf50',
+  lightBackground: '#F5F7FA',
+  amber: '#FFC107',
+  skyBlue: '#00A0E3',
+  navyBlue: '#132249',
+  veryDarkGrey:'#2d2e2e'
+};
